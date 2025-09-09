@@ -24,7 +24,15 @@ class IncidentResponseCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "incident-response-triage-log-incident",
-              dataModelReference: { models: ["inc_summary", "inc_severity", "inc_reportedAt", "inc_reporterEmail", "inc_details"] }
+              dataModelReference: { models: [] }
+            },
+            {
+              id: "sample-step",
+              label: "Sample step",
+              type: "manual",
+              status: "pending",
+              view: "incident-response-triage-sample-step",
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -54,7 +62,7 @@ class IncidentResponseCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "incident-response-assign-&-contain-assign-responder",
-              dataModelReference: { models: ["proj_id", "proj_ownerEmail", "stk_email"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -84,7 +92,7 @@ class IncidentResponseCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "incident-response-resolve-resolve-incident",
-              dataModelReference: { models: ["inc_status", "inc_details"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -114,7 +122,7 @@ class IncidentResponseCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "incident-response-postmortem-postmortem-&-learn",
-              dataModelReference: { models: ["inc_details", "proj_id"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",

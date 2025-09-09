@@ -24,7 +24,7 @@ class ClientOnboardingCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "client-onboarding-intake-collect-client-info",
-              dataModelReference: { models: ["client_name", "client_contactEmail", "client_company"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -54,7 +54,7 @@ class ClientOnboardingCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "client-onboarding-agreement-&-setup-create-onboarding-project",
-              dataModelReference: { models: ["proj_title", "proj_description", "proj_startDate", "client_onboardingDate"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -84,7 +84,7 @@ class ClientOnboardingCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "client-onboarding-stakeholder-alignment-assign-account-team",
-              dataModelReference: { models: ["stk_name", "stk_role", "stk_email"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -114,7 +114,7 @@ class ClientOnboardingCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "client-onboarding-launch-kickoff",
-              dataModelReference: { models: ["proj_ownerEmail", "proj_id"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",

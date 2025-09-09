@@ -24,7 +24,7 @@ class ProjectLaunchCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "project-launch-initiation-create-project",
-              dataModelReference: { models: ["proj_title", "proj_description", "proj_startDate", "proj_endDate", "proj_budget", "proj_ownerEmail"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -54,7 +54,7 @@ class ProjectLaunchCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "project-launch-team-setup-assign-stakeholders",
-              dataModelReference: { models: ["stk_name", "stk_role", "stk_email", "stk_org"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -84,7 +84,7 @@ class ProjectLaunchCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "project-launch-planning-plan-tasks",
-              dataModelReference: { models: ["task_title", "task_description", "task_dueDate", "task_estimateHours"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -114,7 +114,7 @@ class ProjectLaunchCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "project-launch-execution-execute-&-monitor",
-              dataModelReference: { models: ["task_status", "task_assigneeEmail"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -144,7 +144,7 @@ class ProjectLaunchCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "project-launch-review-&-close-review-&-close",
-              dataModelReference: { models: ["proj_id", "proj_endDate", "proj_description"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",

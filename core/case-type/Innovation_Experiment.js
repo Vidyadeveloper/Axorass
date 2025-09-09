@@ -24,7 +24,7 @@ class InnovationExperimentCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "innovation-experiment-ideation-define-hypothesis",
-              dataModelReference: { models: ["exp_hypothesis", "exp_methodology", "exp_leadEmail"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -54,7 +54,7 @@ class InnovationExperimentCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "innovation-experiment-setup-plan-experiment",
-              dataModelReference: { models: ["exp_startDate", "exp_endDate", "exp_leadEmail", "proj_id"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -84,7 +84,7 @@ class InnovationExperimentCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "innovation-experiment-run-execute-experiment",
-              dataModelReference: { models: ["exp_methodology", "exp_startDate", "exp_endDate"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -114,7 +114,7 @@ class InnovationExperimentCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "innovation-experiment-analyze-analyze-results",
-              dataModelReference: { models: ["exp_outcomeSummary", "exp_resultScore"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -144,7 +144,7 @@ class InnovationExperimentCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "innovation-experiment-publish-publish-insights",
-              dataModelReference: { models: ["exp_outcomeSummary", "stk_email"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",

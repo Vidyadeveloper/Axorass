@@ -24,7 +24,7 @@ class ProductProposalCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "product-proposal-draft-draft-proposal",
-              dataModelReference: { models: ["prop_title", "prop_summary", "prop_targetMarket", "prop_requestedBudget", "prop_submittedByEmail"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -54,7 +54,7 @@ class ProductProposalCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "product-proposal-review-internal-review",
-              dataModelReference: { models: ["stk_email", "prop_status"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -84,7 +84,7 @@ class ProductProposalCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "product-proposal-approval-decision",
-              dataModelReference: { models: ["prop_status", "prop_requestedBudget"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
@@ -114,7 +114,7 @@ class ProductProposalCase extends BlazeCase {
               type: "manual",
               status: "pending",
               view: "product-proposal-handoff-handoff-to-delivery",
-              dataModelReference: { models: ["proj_title", "proj_ownerEmail", "prop_id"] }
+              dataModelReference: { models: [] }
             },
             {
               id: "end",
