@@ -47,17 +47,22 @@ const app = express();
 //   process.env.DEV_URL,
 //   process.env.PRODUCTION_URL
 // ];
-const allowedOrigins = [
-  process.env.DEV_URL,
-  process.env.PRODUCTION_URL
-];
+// Allowed origins from env
+const allowedOrigins = [process.env.DEV_URL, process.env.PRODUCTION_URL].filter(
+  Boolean
+); // remove undefined values
 
 // CORS middleware
 app.use(
   cors({
     origin: function (origin, callback) {
-      if (!origin) return callback(null, true); // allow server-to-server requests
-      if (allowedOrigins.includes(origin) || /\.run\.app$/.test(origin)) {
+      if (!origin) return callback(null, true); // allow server-to-server requests or Postman
+      // allow exact dev/prod origins or localhost ports
+      if (
+        allowedOrigins.includes(origin) ||
+        /^http:\/\/localhost:\d+$/.test(origin) ||
+        /\.run\.app$/.test(origin)
+      ) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
@@ -67,20 +72,8 @@ app.use(
   })
 );
 
-// Preflight support
-app.options("*", cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin) || /\.run\.app$/.test(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true,
-  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
-  allowedHeaders: ["Content-Type","Authorization"]
-}));
+// Preflight support for all routes
+app.options("*", cors());
 
 
 // 1. Import your db-interaction module
