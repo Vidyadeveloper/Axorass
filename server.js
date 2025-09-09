@@ -39,14 +39,13 @@ const app = express();
 //   allowedHeaders: ["Content-Type","Authorization"]
 // }));
 
-
-
 // Allowed origins    process.env.DEV_URL,
 
 // const allowedOrigins = [
 //   process.env.DEV_URL,
 //   process.env.PRODUCTION_URL
 // ];
+
 // Allowed origins from env
 const allowedOrigins = [process.env.DEV_URL, process.env.PRODUCTION_URL].filter(
   Boolean
@@ -74,7 +73,6 @@ app.use(
 
 // Preflight support for all routes
 app.options("*", cors());
-
 
 // 1. Import your db-interaction module
 const dbInteraction = require("./node_modules/@blaze-case-ai/blaze-engine/server/database/db-interaction");
@@ -170,9 +168,8 @@ app.use("/api", dataModelRoute);
 
 const PORT = process.env.PORT || 8080;
 
-app.get('/healthz', (_req,res) => res.send('ok'));
+app.get("/healthz", (_req, res) => res.send("ok"));
 const port = Number(process.env.PORT) || 8080;
-
 
 // Connect to MongoDB
 const mongoUri = process.env.MONGODB_URI || "mongodb://localhost:27017/CDD";
